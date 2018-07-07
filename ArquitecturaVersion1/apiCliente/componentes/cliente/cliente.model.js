@@ -14,4 +14,4 @@ let ClienteSchema = new mongoose.Schema({
     Correo : {type : Number, required : true},
 });
 
-module.exports = mongoose.model('Cliente', ClientSchema);
+module.exports = mongoose.model('Cliente', ClienteSchema);

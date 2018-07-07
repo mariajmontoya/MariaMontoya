@@ -1,5 +1,5 @@
 'use strict';
-imprimirListaPersonas();
+imprimirListaClientes();
 let botonRegistrarCliente = document.querySelector('#btnRegistrarCliente');
 
 botonRegistrar.addEventListener('click' , obtenerDatos);

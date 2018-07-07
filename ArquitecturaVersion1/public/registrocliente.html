@@ -13,27 +13,16 @@
         <main>
             <form id="FormularioCliente">               
                 <input type="text" placeholder="Nombre de la empresa" id="txtNombre">
-                <input type="text" placeholder="Cedula Juridica" id="txtCedula">
+                <input type="number" placeholder="Cedula Juridica" id="txtCedula">
                 <input type="text" placeholder="Provincia" id="txtProvincia">
-                <input type="tel" placeholder="Canton" id="txtCanton">
-                <input type="email" placeholder="Distrito"id="txtDistrito">
-                <input type="number" placeholder="Ubicacion" id="Ubicacion">
+                <input type="text" placeholder="Canton" id="txtCanton">
+                <input type="text" placeholder="Distrito"id="txtDistrito">
+                <input type="text" placeholder="Ubicacion" id="Ubicacion">
                 <input type="text" placeholder="Primer Nombre de contacto" id="txtPrimerNombre">
                 <input type="text" placeholder="Primer Apellido de contacto" id="txPrimerApellido">
-                <input type="text" placeholder="Telefono de contacto" id="txtTelefono">
+                <input type="number" placeholder="Telefono de contacto" id="txtTelefono">
                 <input type="text" placeholder="Correo de contacto" id="txtCorreo">
-                <!-- <input type="password" placeholder="Contraseña" id="txtContrasenna">
-                <input type="password" placeholder="Confirmación" id="txtConfirmacion"> -->
                 <button type="button" id="btnRegistrarCliente">Registrar</button>
-
-
-                <!-- <label for="txtNombre">Nombre completo</label> -->
-                <!-- <label for="txtTelefono">Teléfono</label> -->
-                <!-- <label for="txtEmail">Correo electrónico</label> -->
-                <!-- <label for="txtEdad">Edad</label> -->
-                <!-- <input type="number" placeholder="Edad" id="txtEdad" min="0" max="120"> -->
-                <!-- <label for="txtContrasenna">Contraseña</label> -->
-                <!-- <label for="txtConfirmacion">Confirmación</label> -->
             </form>
             <table id="tblCliente">
                 <thead>
@@ -54,10 +43,13 @@
             </table>
         </main>
     </div> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.all.js"></script>
-    <script src="js/servicioRegEstud.js"></script>
-    <script src="js/controladorRegEstud.js"></script>  
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.js"></script>-->
+    <script src="js/servicioCliente.js"></script>
+    <script src="js/controladorCliente.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script src="js/jquery-3.3.1.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script> <!--integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
   </body>
 </html>

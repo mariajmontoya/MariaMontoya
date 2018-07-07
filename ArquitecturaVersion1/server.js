@@ -14,7 +14,7 @@ const nodemon = require('nodemon');
 connect().use(serveStatic(__dirname)).listen(port, () => {
   console.log('El servidor local está levantado dentro del puerto ' + port);
   nodemon({
-    script: 'api/index.js',
+    script: 'apiCliente/index.js',
     ext: 'js'
   });
 });
