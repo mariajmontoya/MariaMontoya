@@ -94,10 +94,10 @@ body {
 
 h1{
     color: #FFF;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 700;
     line-height: 0.8;
-    padding: 20%;
+    padding: 03%;
     text-align: center;
     margin: 0;
 }
@@ -130,7 +130,7 @@ h2 {
 }
 #btnRegistrarCliente{
     position: relative;
-    right: 24%;
+    right: 24%; 
     top: 130px;
 }
 #tblCliente {
@@ -175,6 +175,7 @@ textarea:focus:invalid {
     box-shadow: 0 0 5px #ed2024;
     border-color: #ed2024;
 }
+
 input:required:valid,
 textarea:required:valid {
     /* when a field is considered valid by the browser */
@@ -182,6 +183,7 @@ textarea:required:valid {
     box-shadow: 0 0 5px #5cd053;
     border-color: #28921f;
 }
+
 .ocultar {
     display: none;
 }
@@ -198,4 +200,37 @@ footer{
 }
 .redesSociales a:hover{
     color:  #fbb803;        
+}
+
+
+
+/*desde aqui lo hizo Maria*/
+
+/*olvidaste contrase;a*/
+.botonolvidarcontrasenna {
+    font-size: 16px;
+    color: #fff;
+    line-height: 50px;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    left: 25%;
+    top: 60px;
+    border: none;
+    /*color: #fbb803;*/
+    font-size: 1.1em;
+    /*border-bottom: 1px solid #fff;*/
+    background: transparent;
+    width: 50%;
+    margin-bottom: 3%;
+    height: 30px;
+    
+}
+
+/*boton incio de sesion*/
+#btnInicioSesion{
+    position: relative;
+    right: 24%; 
+    top: 200px;
 }

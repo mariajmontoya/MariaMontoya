@@ -43,9 +43,9 @@ app.use( function(req, res, next) {
   });
 
 
-const cliente = require('./componentes/cliente/cliente.route');
+const clientes = require('./componentes/cliente/clientes.route');
 
-app.use('/api', cliente);
+app.use('/api', clientes);
 
 module.exports = app;
 

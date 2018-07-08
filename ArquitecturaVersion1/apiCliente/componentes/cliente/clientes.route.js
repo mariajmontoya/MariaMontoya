@@ -1,10 +1,10 @@
 'use strict';
 const express = require('express');
 const router = express.Router();
-const cliente = require('./cliente.api');
+const cliente = require('./clientes.api');
 
 
-router.route('/registrarCliente')
+router.route('/registrarClientes')
     .post(function(req, res){
     cliente.registrar(req, res);
 });

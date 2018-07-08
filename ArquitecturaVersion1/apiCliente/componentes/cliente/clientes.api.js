@@ -1,19 +1,19 @@
 'use strict';
 //para que se conecte a la base de datos de mongo, necesito de mongoose
-const clienteModel = require('./cliente.model');
+const clienteModel = require('./clientes.model');
 
 module.exports.registrar = function(req, res){
     let nuevoCliente = new clienteModel({
         Nombre : req.body.Nombre,
-        CedulaJuridica : req.body.CedulaJuridica,
-        Provincia : req.body.Provincia,
-        Distrito : req.body.Distrito,
-        Canton : req.body.Canton,
+        Cedula : req.body.Cedula,
+        Provincia: req.body.Provincia,
+        Canton :  req.body.Canton,
+        Distrito :  req.body.Distrito,
         Ubicacion : req.body.Ubicacion,
         PrimerNombre : req.body.PrimerNombre,
-        PrimerApellido : req.body.PrimerApellido,
+        PrimerApellido :  req.body.PrimerApellido,
         Telefono : req.body.Telefono,
-        Correo : req.body.Correo
+        Correo : req.body.Correo,
     });
 
     nuevoCliente.save(function(error){
@@ -25,4 +25,10 @@ module.exports.registrar = function(req, res){
 
     });
 
+};
+module.exports.listar = function(req, res){
+    clienteModel.find().then(
+        function(usuarios){
+            res.send(usuarios);
+        });
 };

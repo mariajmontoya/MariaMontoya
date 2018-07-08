@@ -1,6 +1,6 @@
 'use strict';
 imprimirListaClientes();
-let botonRegistrarCliente = document.querySelector('#btnRegistrarCliente');
+let botonRegistrar = document.querySelector('#btnRegistrarCliente');
 
 botonRegistrar.addEventListener('click' , obtenerDatos);
 
@@ -9,6 +9,7 @@ let inputCedula = document.querySelector('#txtCedula');
 let inputProvincia = document.querySelector('#txtProvincia');
 let inputCanton = document.querySelector('#txtCanton');
 let inputDistrito = document.querySelector('#txtDistrito');
+let inputUbicacion = document.querySelector('#txtUbicacion');
 let inputPrimerNombre = document.querySelector('#txtPrimerNombre');
 let inputPrimerApellido = document.querySelector('#txtPrimerApellido');
 let inputTelefono = document.querySelector('#txtTelefono');
@@ -53,6 +54,29 @@ function obtenerDatos(){
     
 }
 
+function imprimirListaClientes() {
+    let listaClientes = obtenerListaClientes();
+    let tbody = document.querySelector('#tblPersonas tbody');
+    tbody.innerHTML = '';
+
+    for(let i = 0; i < listaClientes.length; i++){
+        let fila = tbody.insertRow();
+
+        let cNombre = fila.insertCell();
+        let cPrimerNombre = fila.insertCell();
+        let cPrimerApellido = fila.insertCell();
+        let cCorreo = fila.insertCell();
+
+        cNombre.innerHTML = listaClientes[i]['nombre_empresa'];
+        cPrimerNombre.innerHTML = listaClientes[i]['nombre_contacto'];
+        cPrimerApellido.innerHTML = listaClientes[i]['apellidocontacto'];
+        cTelefono.innerHTML = listaClientes[i]['telefono_contacto'];
+        cCorreo.innerHTML = listaClientes[i]['correo_contacto'];
+
+    }
+
+};
+
 function validar(){
     let bError = false;
 
@@ -60,18 +84,39 @@ function validar(){
     let regexSoloNumeros = /^[0-9]{1,3}$/;
 
     //Validación del NombreEmpresa
-    if(inputNombreEmpresa.value == '' || (regexSoloLetras.test(inputNombreEmpresa.value)==false) ){
-        inputNombreEmpresa.classList.add('error_input');
+    if(inputNombre.value == '' || (regexSoloLetras.test(inputNombre.value)==false) ){
+        inputNombre.classList.add('error_input');
         bError = true;
     }else{
-        inputNombreEmpresa.classList.remove('error_input');
+        inputNombre.classList.remove('error_input');
     }
     //Validación de la CedulaJuridica
-    if(inputCedulaJuridica.value == ''){
-        inputCedulaJuridica.classList.add('error_input');
+    if(inputCedula.value == ''){
+        inputCedula.classList.add('error_input');
         bError = true;
     }else{
-        inputCedulaJuridica.classList.remove('error_input');
+        inputCedula.classList.remove('error_input');
+    }
+     //Validación de la Distrito
+     if(inputDistrito.value == ''){
+        inputDistrito.classList.add('error_input');
+        bError = true;
+    }else{
+        inputDistrito.classList.remove('error_input');
+    }
+     //Validación de la Provincia
+     if(inputProvincia.value == ''){
+        inputProvincia.classList.add('error_input');
+        bError = true;
+    }else{
+        inputProvincia.classList.remove('error_input');
+    }
+     //Validación de la Canton
+     if(inputCanton.value == ''){
+        inputCanton.classList.add('error_input');
+        bError = true;
+    }else{
+        inputCanton.classList.remove('error_input');
     }
     //Validación de la Ubicacion
     if(inputUbicacion.value == ''){
@@ -81,27 +126,34 @@ function validar(){
         inputUbicacion.classList.remove('error_input');
     }
     //Validación del NombreContacto
-    if(inputNombreContacto.value == '' ){
-        inputNombreContacto.classList.add('error_input');
+    if(inputPrimerNombre.value == '' ){
+        inputPrimerNombre.classList.add('error_input');
         bError = true;
     }else{
-        inputNombreContacto.classList.remove('error_input');
+        inputPrimerNombre.classList.remove('error_input');
+    }
+    //Validación del ApellidoCOntacto
+    if(inputPrimerApellido.value == '' ){
+        inputPrimerApellido.classList.add('error_input');
+        bError = true;
+    }else{
+        inputPrimerApellido.classList.remove('error_input');
     }
 
     //Validación de la TelefonoContacto
-    if(inputTelefonoContacto.value == '' || (regexSoloNumeros.test(inputTelefonoContacto.value) == false) ){
-        inputTelefonoContacto.classList.add('error_input');
+    if(inputTelefono.value == '' || (regexSoloNumeros.test(inputTelefono.value) == false) ){
+        inputTelefono.classList.add('error_input');
         bError = true;
     }else{
-        inputTelefonoContacto.classList.remove('error_input');
+        inputTelefono.classList.remove('error_input');
     }
 
     //Validación de la CorreoContacto
-    if(inputCorreoContacto.value == '' ){
-        inputCorreoContacto.classList.add('error_input');
+    if(inputCorreo.value == '' ){
+        inputCorreo.classList.add('error_input');
         bError = true;
     }else{
-        inputCorreoContacto.classList.remove('error_input');
+        inputCorreo.classList.remove('error_input');
     }
 
     return bError;
@@ -120,6 +172,3 @@ function limpiarFormulario(){
     inputCorreo.value = '';
 }
 
-function imprimirListaClientes() {
-    
-}
