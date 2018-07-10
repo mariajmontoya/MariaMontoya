@@ -3,7 +3,7 @@
 function registrarCliente(paInfoCliente){
     let respuesta = '';
     let peticion = $.ajax({
-        url : 'http://localhost:4000/api/registrarCliente',
+        url : 'http://localhost:4000/api/registrarClientes',
         type : 'post',
         contentType : 'application/x-www-form-urlencoded; charset=utf-8',
         dataType : 'json',
@@ -37,7 +37,7 @@ function obtenerListaClientes(){
 
     let respuesta = '';
     let peticion = $.ajax({
-        url : 'http://localhost:4000/api/listar_usuarios',
+        url : 'http://localhost:4000/api/listarClientes',
         type : 'get',
         contentType : 'application/x-www-form-urlencoded; charset=utf-8',
         dataType : 'json',

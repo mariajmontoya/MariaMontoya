@@ -1,8 +1,8 @@
 'use strict';
-imprimirListaClientes();
-let botonRegistrar = document.querySelector('#btnRegistrarCliente');
+//imprimirListaClientes();
+// let botonRegistrar = document.querySelector('#btnRegistrarCliente');
 
-botonRegistrar.addEventListener('click' , obtenerDatos);
+// botonRegistrar.addEventListener('click' , obtenerDatos);
 
 let inputNombre = document.querySelector('#txtNombre');
 let inputCedula = document.querySelector('#txtCedula');
@@ -20,15 +20,15 @@ function obtenerDatos(){
     let bError = false;
 
     let sNombre = inputNombre.value;    
-    let nCedula = Number(inputCedula.value);
+    let sCedula = Number(inputCedula.value);
     let sProvincia = inputProvincia.value;
     let sCanton = inputCanton.value;
     let sDistrito = inputDistrito.value;
     let sUbicacion = inputUbicacion.value;
     let sPrimerNombre = inputPrimerNombre.value;
     let sPrimerApellido = inputPrimerApellido.value;
-    let nTelefono = Number(inputTelefono.value);
-    let nCorreo = inputCorreo.value;
+    let sTelefono = Number(inputTelefono.value);
+    let sCorreo = inputCorreo.value;
 
     infoCliente.push(sNombre, sCedula, sProvincia, sCanton, sDistrito, sUbicacion, sPrimerNombre, sPrimerApellido,sTelefono, sCorreo);
     
@@ -37,7 +37,7 @@ function obtenerDatos(){
         swal({
             type : 'warning',
             title : 'No se pudo registrar el usuario cliente',
-            text: 'Por favor revise los campos en rojo',
+            /*text: 'Por favor revise los campos en rojo',*/
             confirmButtonText : 'Entendido'
         });
         console.log('No se pudo registrar el usuario');
@@ -46,17 +46,17 @@ function obtenerDatos(){
         swal({
             type : 'success',
             title : 'Registro exitoso',
-            text: 'El Cliente usuario se registró adecuadamente',
+            /*text: 'El Cliente usuario se registró adecuadamente',*/
             confirmButtonText : 'Entendido'
         });
-        limpiarFormulario();
+        //limpiarFormulario();
     }
     
 }
 
 function imprimirListaClientes() {
     let listaClientes = obtenerListaClientes();
-    let tbody = document.querySelector('#tblPersonas tbody');
+    let tbody = document.querySelector('#tblCliente tbody');
     tbody.innerHTML = '';
 
     for(let i = 0; i < listaClientes.length; i++){
@@ -65,13 +65,14 @@ function imprimirListaClientes() {
         let cNombre = fila.insertCell();
         let cPrimerNombre = fila.insertCell();
         let cPrimerApellido = fila.insertCell();
+        let cTelefono = fila.insertCell();
         let cCorreo = fila.insertCell();
 
-        cNombre.innerHTML = listaClientes[i]['nombre_empresa'];
-        cPrimerNombre.innerHTML = listaClientes[i]['nombre_contacto'];
-        cPrimerApellido.innerHTML = listaClientes[i]['apellidocontacto'];
-        cTelefono.innerHTML = listaClientes[i]['telefono_contacto'];
-        cCorreo.innerHTML = listaClientes[i]['correo_contacto'];
+        cNombre.innerHTML = listaClientes[i]['Nombre'];
+        cPrimerNombre.innerHTML = listaClientes[i]['PrimerNombre'];
+        cPrimerApellido.innerHTML = listaClientes[i]['PrimerApellido'];
+        cTelefono.innerHTML = listaClientes[i]['Telefono'];
+        cCorreo.innerHTML = listaClientes[i]['Correo'];
 
     }
 
@@ -171,4 +172,25 @@ function limpiarFormulario(){
     inputTelefono.value = '';
     inputCorreo.value = '';
 }
+function myFunction() {
+    // Declare variables 
+    var input, filter, table, tr, td, i;
+    input = document.getElementById("barraBuscar");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("myTable");
+    tr = table.getElementsByTagName("tr");
+  
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td")[0];
+      for (let j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+              td[j].style.display = "block";
+            } else {
+              td[j].style.display = "none";
+            }
+          
+      }
+    }
+  }
 
