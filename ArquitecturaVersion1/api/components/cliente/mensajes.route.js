@@ -1,10 +1,13 @@
 'use strict';
-
 const express = require('express');
 const router = express.Router();
-const mensaje = require('./mensajes.api');
+const mensajes = require('.mensajes.api');
 
 
+router.route('/registrarMensajes')
+    .post(function(req, res){
+    mensaje.registrar(req, res);
+});
 
 router.route('/listarMensajes')
     .get(function(req, res){

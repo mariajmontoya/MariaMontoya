@@ -1,0 +1,75 @@
+html {
+    background-image: url("../img/heroBanner.jpg");
+    background-color: #000;
+  }
+  h1 {
+    color: #FFF;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 0.8;
+    padding: 03%;
+    text-align: center;
+    margin: 0;
+}
+body {
+    font-family: tahoma;
+    color: #fbb803;
+}
+
+/*listarClientes html*/
+#tblCliente {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    font-family: tahoma;
+    /*border: none;*/
+    width: 100%; /* Full-width */
+    font-size: 22px; /* Increase font-size */
+    color: #fbb803;
+    padding: 10px 20px 10px 20px; /* Add some padding */
+    /*border: 1px solid #ddd;*/ /* Add a grey border */
+    margin-bottom: 15px; /* Add some space below the input */
+    
+}
+
+
+/*listarmensajes html*/
+#tblMensajeria {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    font-family: tahoma;
+    /*border: none;*/
+    width: 100%; /* Full-width */
+    font-size: 22px; /* Increase font-size */
+    color: #fbb803;
+    padding: 10px 20px 10px 20px; /* Add some padding */
+    /*border: 1px solid #ddd;*/ /* Add a grey border */
+    margin-bottom: 15px; /* Add some space below the input */
+    
+}
+
+/*listar tiquetes html*/
+#tblTiquetes {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    font-family: tahoma;
+    /*border: none;*/
+    width: 100%; /* Full-width */
+    font-size: 22px; /* Increase font-size */
+    color: #fbb803;
+    padding: 10px 20px 10px 20px; /* Add some padding */
+    /*border: 1px solid #ddd;*/ /* Add a grey border */
+    margin-bottom: 15px; /* Add some space below the input */
+    
+}
+
+
+ 

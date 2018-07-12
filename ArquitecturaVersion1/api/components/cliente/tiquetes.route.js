@@ -1,17 +1,17 @@
 'use strict';
 const express = require('express');
 const router = express.Router();
-const cliente = require('./clientes.api');
+const tiquete = require('./tiquete.api');
 
 
-router.route('/registrarClientes')
+router.route('/registrarTiquete')
     .post(function(req, res){
-    cliente.registrar(req, res);
+        tiquete.registrar(req, res);
 });
 
-router.route('/listarClientes')
+router.route('/listarTiquete')
     .get(function(req, res){
-    cliente.listar(req, res);
+       tiquete.listar(req, res);
 });
 
 module.exports = router;

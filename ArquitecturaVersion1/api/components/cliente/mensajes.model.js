@@ -2,11 +2,11 @@
 let mongoose = require('mongoose');
 
 let MensajeSchema = new mongoose.Schema({
-
-    Fecha : {type : String, required : true},
-    Usuario : {type : String, required : true},
-    Asunto : {type : String,  required: true},
-
+    Autor : {type : String},
+    Destinatario: {type : String},
+    Cuerpo : {type : String},
+    Asunto : {type : String},
+    Fecha : {type : String},
     
 });
 

@@ -1,8 +1,10 @@
-'use strict';
-//imprimirListaClientes();
-// let botonRegistrar = document.querySelector('#btnRegistrarCliente');
+'use strict'
 
-// botonRegistrar.addEventListener('click' , obtenerDatos);
+/*Sobre registro/listar/filtrar del cliente*/
+//imprimirListaClientes();
+let botonRegistrar = document.querySelector('#btnRegistrarCliente');
+
+botonRegistrar.addEventListener('click' , obtenerDatos);
 
 let inputNombre = document.querySelector('#txtNombre');
 let inputCedula = document.querySelector('#txtCedula');
@@ -15,11 +17,49 @@ let inputPrimerApellido = document.querySelector('#txtPrimerApellido');
 let inputTelefono = document.querySelector('#txtTelefono');
 let inputCorreo = document.querySelector('#txtCorreo');
 
+
+/*se supope que este es el filtrar que estams usando todos pero no me funciona*/
+/*function FiltrarListaClientes (){
+
+    let criterioBusqueda = inputBusqueda.value.toUpperCase();
+    let filasClientes = tblCliente.getElementsByTagName('tbody');
+    let datosFila = null;
+    let datos = null;
+    let valor = null;
+    let coincide = false;
+
+    for (let i = 1; i < filasClientes.length; i++) {    
+        datosFila = filasClientes[i];
+        datos = datosFila.getElementsByTagName('tbody');
+        coincide = false;
+
+        for (let j = 0; j < datos.length; j++) {
+            valor = datos[j].innerHTML.toUpperCase();
+
+            if(valor.includes(criterioBusqueda)){
+                coincide = true;
+            } 
+        }
+        if(coincide){
+            datosFila.classList.remove('esconder');
+        } else {
+            datosFila.classList.add('esconder');
+        }
+    }
+
+   
+};
+
+/*inputFiltro.addEventListener('keyup' , function(){
+    imprimirListaClientes(inputFiltro.value)
+});*/
+
 function obtenerDatos(){
     let infoCliente =[];
     let bError = false;
 
-    let sNombre = inputNombre.value;    
+    
+    let sNombre = inputNombre.value;
     let sCedula = Number(inputCedula.value);
     let sProvincia = inputProvincia.value;
     let sCanton = inputCanton.value;
@@ -40,21 +80,23 @@ function obtenerDatos(){
             /*text: 'Por favor revise los campos en rojo',*/
             confirmButtonText : 'Entendido'
         });
+        
         console.log('No se pudo registrar el usuario');
     }else{
         registrarCliente(infoCliente);
         swal({
             type : 'success',
             title : 'Registro exitoso',
-            /*text: 'El Cliente usuario se registró adecuadamente',*/
+            text: 'El cliente se registró adecuadamente',
             confirmButtonText : 'Entendido'
         });
-        //limpiarFormulario();
+        //imprimirListaPersonas();
+        limpiarFormulario();
     }
     
 }
 
-function imprimirListaClientes() {
+/*function imprimirListaClientes() {
     let listaClientes = obtenerListaClientes();
     let tbody = document.querySelector('#tblCliente tbody');
     tbody.innerHTML = '';
@@ -76,7 +118,7 @@ function imprimirListaClientes() {
 
     }
 
-};
+};*/
 
 function validar(){
     let bError = false;
@@ -172,25 +214,8 @@ function limpiarFormulario(){
     inputTelefono.value = '';
     inputCorreo.value = '';
 }
-function myFunction() {
-    // Declare variables 
-    var input, filter, table, tr, td, i;
-    input = document.getElementById("barraBuscar");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("myTable");
-    tr = table.getElementsByTagName("tr");
-  
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
-      for (let j = 0; j < td.length; j++) {
-            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
-              td[j].style.display = "block";
-            } else {
-              td[j].style.display = "none";
-            }
-          
-      }
-    }
-  }
+
+
+
+
 

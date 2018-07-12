@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
     <head>
         <meta charset="UFT-8">    
         <title>Document</title>
+        <link rel="stylesheet" href="css/tiquete.css">
         <link rel="stylesheet" href="css/style.css">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
@@ -12,9 +13,24 @@
   <body>
     <div class="wrapper"> 
             <!-- * * * * * * * * * * * en este div es en el que tienen que trabajar * * * * * * * * * * * * * * * -->
-            <div><h1>Registro Cliente</h1></div>
+            <div><h1>Tiquetes</h1></div>
 
             <form id="FormularioCliente">               
+                <input type="text" placeholder="Codigo Proyecto" id="txtCodigoTiquete">
+                <input type="text" placeholder="Nombre de la Empresa" id="txtNobreEmpresa">
+                <input type="number" placeholder="Cedula Juridica" id="txtCedula">
+                <input type="text" placeholder="Descripcion Tiquete" id="txtDescripcion">
+                <input type="text" placeholder="Fecha de creacion"id="txtFecha">
+                <input type="text" placeholder="Estado del Tiquete" id="txtEstadoTiquete">
+                <input type="text" placeholder="Primer Nombre de contacto" id="txtPrimerNombre">
+                <input type="text" placeholder="Primer Apellido de contacto" id="txtPrimerApellido">
+                <input type="number" placeholder="Telefono de contacto" id="txtTelefono">
+                <input type="text" placeholder="Correo de contacto" id="txtCorreo">
+                <button type="button" id="btnTiquete">Crear Tiquete</button>
+            </form>
+
+
+            <!--<form id="FormularioCliente">               
                 <input type="text" placeholder="Nombre de la empresa" id="txtNombre">
                 <input type="number" placeholder="Cedula Juridica" id="txtCedula">
                 <input type="text" placeholder="Provincia" id="txtProvincia">
@@ -26,8 +42,22 @@
                 <input type="number" placeholder="Telefono de contacto" id="txtTelefono">
                 <input type="text" placeholder="Correo de contacto" id="txtCorreo">
                 <button type="button" id="btnRegistrarCliente">Registrar</button>
-            </form>
+            </form>-->
+
+
+
             
+           <!--<table id="tblCliente">
+                <thead>
+                    <th>Nombre de la Empresa</th>
+                    <th>Nombre de contacto</th>
+                    <th>Apellido de contacto</th>
+                    <th>Correo de contacto</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>-->
     </div> 
     
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.js"></script>
@@ -40,10 +70,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!--<script src="js/jquery-3.3.1.js"></script>-->
+    <script src="js/jquery-3.3.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
     <script src="js/servicio.js"></script>
-    <script src="js/controladorRegistro.js"></script>
+    <script src="js/controladorListar.js"></script>
   </body>
 </html>

@@ -1,5 +1,7 @@
 'use strict';
 
+
+/*Sobre Registro Cliente*/
 function registrarCliente(paInfoCliente){
     let respuesta = '';
     let peticion = $.ajax({
@@ -59,3 +61,63 @@ function obtenerListaClientes(){
     
     return listaClientes;
 }
+
+/*Sobre Mensajeria*/
+function registrarMensaje(paInfoMensaje){
+    let respuesta = '';
+    let peticion = $.ajax({
+        url : 'http://localhost:4000/api/registrarMensajes',
+        type : 'post',
+        contentType : 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType : 'json',
+        async : false,
+        data:{
+            Autor: paInfoMensaje[0],
+            Destinatariola : paInfoMensaje[1],
+            Cuerpo : paInfoMensaje[2],
+            Asunto : paInfoMensaje[3],
+            Fecha : paInfoMensaje[4],
+            
+        }
+      });
+    
+      peticion.done(function(response){
+       respuesta = response;
+      });
+    
+      peticion.fail(function(response){
+       
+      });
+
+      return respuesta;
+}
+function obtenerListaMensajes(){
+    let listaMensajes = [];
+
+    let respuesta = '';
+    let peticion = $.ajax({
+        url : 'http://localhost:4000/api/listarMensajes',
+        type : 'get',
+        contentType : 'application/x-www-form-urlencoded; charset=utf-8',
+        dataType : 'json',
+        async : false,
+        data:{
+            
+        }
+      });
+    
+      peticion.done(function(response){
+       respuesta = response;
+      });
+    
+      peticion.fail(function(response){
+       
+      });
+
+      return respuesta;
+    
+    return listaMensajes;
+}
+
+
+

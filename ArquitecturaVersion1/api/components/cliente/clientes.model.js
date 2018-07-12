@@ -1,7 +1,8 @@
 'use strict';
+
 let mongoose = require('mongoose');
 
-let ClienteSchema = new mongoose.Schema({
+let clienteSchema = new mongoose.Schema({
     Nombre : {type : String, required : true},
     Cedula : {type : Number, unique : true, required: true},
     Provincia : {type : String, required: true},
@@ -14,4 +15,4 @@ let ClienteSchema = new mongoose.Schema({
     Correo : {type : String, required : true},
 });
 
-module.exports = mongoose.model('Cliente', ClienteSchema);
+module.exports = mongoose.model('Cliente', clienteSchema);

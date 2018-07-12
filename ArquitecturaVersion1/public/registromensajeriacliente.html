@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
     <head>
         <meta charset="UFT-8">    
         <title>Document</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/registro.css">
         <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -12,22 +13,29 @@
   <body>
     <div class="wrapper"> 
             <!-- * * * * * * * * * * * en este div es en el que tienen que trabajar * * * * * * * * * * * * * * * -->
-            <div><h1>Registro Cliente</h1></div>
+            <div><h1>Mensajeria</h1></div>
 
             <form id="FormularioCliente">               
-                <input type="text" placeholder="Nombre de la empresa" id="txtNombre">
-                <input type="number" placeholder="Cedula Juridica" id="txtCedula">
-                <input type="text" placeholder="Provincia" id="txtProvincia">
-                <input type="text" placeholder="Canton" id="txtCanton">
-                <input type="text" placeholder="Distrito"id="txtDistrito">
-                <input type="text" placeholder="Ubicacion" id="txtUbicacion">
-                <input type="text" placeholder="Primer Nombre de contacto" id="txtPrimerNombre">
-                <input type="text" placeholder="Primer Apellido de contacto" id="txtPrimerApellido">
-                <input type="number" placeholder="Telefono de contacto" id="txtTelefono">
-                <input type="text" placeholder="Correo de contacto" id="txtCorreo">
-                <button type="button" id="btnRegistrarCliente">Registrar</button>
+                <input type="text" placeholder="Autor" id="txtAutor">
+                <input type="text" placeholder="Destinatario" id="txtDestinatario">
+                <input type="text" placeholder="Cuerpo" id="txtCuerpo">
+                <input type="text" placeholder="Asunto" id="txtAsunto">
+                <input type="text" placeholder="Fecha"id="txtFecha">
+                <button type="button" id="btnEnviar">Enviar</button>
             </form>
-            
+
+
+
+            <!--<table id="tblMensajes">
+                <thead>
+                    <th>Asunto</th>
+                    <th>Destinatario/th>
+                    <th>Fecha de creacion</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>-->
     </div> 
     
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.5/sweetalert2.js"></script>
@@ -40,8 +48,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!--<script src="js/jquery-3.3.1.js"></script>-->
+    <script src="js/jquery-3.3.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
     <script src="js/servicio.js"></script>
     <script src="js/controladorRegistro.js"></script>
